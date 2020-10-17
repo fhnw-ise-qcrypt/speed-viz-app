@@ -1,12 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import * as d3 from 'd3';
 import data from './handshakes_pretty.json';
+import {useTransition, animated} from 'react-spring';
 
 const sig=Object.entries(data)[0][0]
 const sigs=Object.entries(data)
 
 type dataEntry = [string, number];
 type Props = {
+}
+type BarGroupProps = {
+  boundedWidth: number, 
+  boundedHeight: number
+}
+
+type BarProps = {
+  xOffset: number,
+  width: number,
+  height: number,
+  xLabel: string,
+  yLabel: number,
+  y: number,
 }
 
 const Plot: React.FC<Props> = () =>{
@@ -30,6 +44,34 @@ const Plot: React.FC<Props> = () =>{
     .range([0, boundedHeight-20])
     .nice()
 
+  const BarGroup: React.FC<BarGroupProps> = ({boundedHeight, boundedWidth}) =>{
+    const transitionRef = useRef();
+    //@ts-ignore
+    const transition = useTransition(
+      //@ts-ignore
+      entriesAsList.map(d=>({height: yScale(yAccessor(d as dataEntry)), y: boundedHeight-yScale(yAccessor(d as dataEntry))})),
+      //@ts-ignore
+      (entry, index) => index,
+      {
+        unique: true,
+        //@ts-ignore
+        from: ({height, y})=>({height, y}),
+        //@ts-ignore
+        //@ts-ignore
+        enter: ({height, y})=>({height, y}),
+        //@ts-ignore
+        update: ({height, y})=>({height, y}),
+        ref: transitionRef
+      }
+    )
+    //@ts-ignore
+    return transition.map(({item, props, key}, index)=>
+      <>
+        <animated.rect key={key} style={{...props, fill: "red"}} x={index*40} width={20} rx={5}></animated.rect>
+      </>
+    )
+  }
+
   return(
     <>
       <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
@@ -42,25 +84,11 @@ const Plot: React.FC<Props> = () =>{
       <div className="plot">
         <svg style={{backgroundColor: "#282c34", borderRadius: "5px"}} width={width} height={height}>
           <g transform={`translate(${marginLeft}, ${marginTop})`}>
-            {entriesAsList.map((entry, index)=>{
-              //@ts-ignore
-              const barHeight = yScale(yAccessor(entry))
-              return(
-                <g transform={`translate(${index/13*boundedWidth}, 0)`} key={index}>
-                  //@ts-ignore
-                  <rect style={{fill: "red"}} y={boundedHeight-barHeight} width={barWidth} height={barHeight} rx={5}></rect>
-                  //@ts-ignore
-                  <text style={{fontSize: "12px", fontWeight: "bold", textAnchor: "middle", fill: "red"}} x={barWidth/2} y={boundedHeight-barHeight-5}>{yAccessor(entry)}</text>
-                  //@ts-ignore
-                  <text style={{fill: "white", transformOrigin: "top left", transform: `translate(${barWidth/2}px, ${boundedHeight+10}px) rotate(-45deg)`, fontSize: "10px", fontWeight: "bold", textAnchor: "end"}}>{xAccessor(entry)}</text>
-                </g>
-              )
-            })}
+            <BarGroup boundedWidth={boundedWidth} boundedHeight={boundedHeight}></BarGroup>
           </g>
         </svg>
       </div>
     </>
   );
 }
-
 export default Plot;
