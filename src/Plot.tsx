@@ -48,7 +48,7 @@ const Plot: React.FC<Props> = () =>{
     .range([0, boundedHeight-20])
     .nice()
   //@ts-ignore
-  const colorScale = d3.scaleLinear().domain([0, 0.001]).range([0.3, 0.8]).clamp(true);//more than 20ms will be red
+  const colorScale = d3.scaleLinear().domain([0, 0.040]).range([0.2, 0.8]).clamp(true);//more than 20ms will be red
   //@ts-ignore
   const BarGroup: React.FC<BarGroupProps> = ({boundedHeight, boundedWidth}) =>{
     //@ts-ignore
