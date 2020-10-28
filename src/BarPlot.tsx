@@ -16,12 +16,13 @@ console.log(maxValue)
 //console.log(max)
 type Props = {
 }
+
 type BarGroupProps = {
   boundedWidth: number, 
   boundedHeight: number
 }
 
-const Plot: React.FC<Props> = () =>{
+const BarPlot: React.FC<Props> = () =>{
   const [chosenSig, setChosenSig]=useState<string[]>([sigs[0][0], sigs[0][0]])
   //@ts-ignore
   const entriesAsList:dataEntry[]=Object.entries(data[chosenSig[0]]).sort()
@@ -49,6 +50,7 @@ const Plot: React.FC<Props> = () =>{
     .nice()
   //@ts-ignore
   const colorScale = d3.scaleLinear().domain([0, 0.040]).range([0.2, 0.8]).clamp(true);//more than 20ms will be red
+
   //@ts-ignore
   const BarGroup: React.FC<BarGroupProps> = ({boundedHeight, boundedWidth}) =>{
     //@ts-ignore
@@ -79,6 +81,7 @@ const Plot: React.FC<Props> = () =>{
     )
   }
 
+
   return(
     <>
       <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
@@ -98,4 +101,4 @@ const Plot: React.FC<Props> = () =>{
     </>
   );
 }
-export default Plot;
+export default BarPlot;
