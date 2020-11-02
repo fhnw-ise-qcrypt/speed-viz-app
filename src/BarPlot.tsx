@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import * as d3 from 'd3';
-import data from './handshakes_pretty.json';
+import data from './testresults/handshakes_pretty.json';
 import {useTransition, animated} from 'react-spring';
 
 type dataEntry = [string, number];
@@ -84,13 +84,13 @@ const BarPlot: React.FC<Props> = () =>{
 
   return(
     <>
-      <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
+      <div className={"button-panel"}>
         {
         //@ts-ignore
-          sigs.map((sig, index)=><button onClick={(e:MouseEvent)=>setChosenSig([e.target.innerHTML,...chosenSig].slice(0,2))} key={index}>{sig[0]}</button>)
+          sigs.map((sig, index)=><div className={chosenSig[0]===sig[0]? "button-active button":"button"} onClick={(e:MouseEvent)=>setChosenSig([e.target.innerHTML,...chosenSig].slice(0,2))} key={index}>{sig[0]}</div>)
         }
       </div>
-      <h3 style={{color: "white"}}>{chosenSig}</h3>      
+      <h3 style={{color: "white"}}>{chosenSig[0]}</h3>      
       <div className="plot">
         <svg style={{backgroundColor: "#282c34", borderRadius: "5px"}} width={width} height={height}>
           <g transform={`translate(${marginLeft}, ${marginTop})`}>
