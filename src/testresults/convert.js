@@ -15,13 +15,13 @@ fs.readdir('./', (err, data)=>{
     roundTripTimes.map(async (rtt) => {
       const fileNamesFilteredByRTT = csvFileNames.filter(fileName=>fileName.match(`_${rtt}p`))
       const data = await Promise.all(fileNamesFilteredByRTT
-        .map(async (fileName) => createObjectFromCSVFile(`./${fileName}`)))
+        .map(async (fileName, index) => createObjectFromCSVFile(`./${fileName}`, index)))
       fs.writeFileSync(`${rtt}_ms.json`, JSON.stringify(data, null, 4))
     })
   }
 })
 
-const createObjectFromCSVFile = async (pathString) => {
+const createObjectFromCSVFile = async (pathString, index) => {
   const data = await readFile(pathString, 'utf8')
   const reducedData = data
       .split(/\r?\n/)// split file by lines
@@ -36,6 +36,7 @@ const createObjectFromCSVFile = async (pathString) => {
       )// only take the delay time at index 0 and the median of all the values
   return {
     name: pathString.split(/_\d*p\d*ms.csv/)[0].split('/')[1],// only keep the kex-name
+    index: index,
     data: reducedData.slice(0, reducedData.length-1), //remove the last entry which is undefined
   }
 }
