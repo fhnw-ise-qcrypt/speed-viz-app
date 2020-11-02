@@ -23,7 +23,22 @@ type DataPoint = {
 }
 
 function App() {
-  const [chosen, setChosen] = useState<String[]>(["kyber512", "saber"])
+  return (
+    <div className="App">
+      <div className="App-body">
+        <h1>oqs-speed Handshake Testresults</h1>
+        <BarPlot></BarPlot>
+        <h1> </h1>
+        <h1> </h1>
+        <h1>pq-tls-benchmark Emulated Network Kex Testresults</h1>
+        <NetworkPerformancePlots/>
+      </div>
+  </div>
+  );
+}
+
+const NetworkPerformancePlots = () =>{
+  const [chosen, setChosen] = useState<String[]>(["prime256v1"])
   const toggle = (k:string) =>{
     if(chosen.includes(k)){
       setChosen(chosen.filter(d=>d!==k))
@@ -32,24 +47,21 @@ function App() {
       setChosen([...chosen, k])
     }
   }
-  return (
-    <div className="App">
-      <div className="App-body">
-        <h2>oqs-speed Handshake Testresults</h2>
-        <BarPlot></BarPlot>
-        <h2>pq-tls-benchmark Emulated Network Kex Testresults</h2>
-          {
-          //@ts-ignore 
-            pqTlsTestresults[0].map((kex:Kex)=><button onClick={(e:MouseEvent)=>toggle(e.target.innerHTML)}>{kex.name}</button>)
-          }
-          {pqTlsTestresults.map((RTTdata, index)=>{
-            const filteredData = RTTdata.filter(kex=>chosen.includes(kex.name))
-            return <RTTPlots data={filteredData} rtt={rtt[index]}/>
-          }
-        )}
+  return(
+    <>
+      <div className={"button-panel"}>
+        {// Create Buttons for all available Kexs
+        //@ts-ignore 
+          pqTlsTestresults[0].map((kex:Kex)=><div className={chosen.includes(kex.name)? "button-active button" :"button"} onClick={(e:MouseEvent)=>{e.preventDefault(); return toggle(e.target.innerHTML)}}>{kex.name}</div>)
+        }
       </div>
-  </div>
-  );
+      {// Display Data. For every RTT two Plots, one for median, one for 95 percentile.
+        pqTlsTestresults.map((RTTdata, index)=>{
+          const filteredData = RTTdata.filter(kex=>chosen.includes(kex.name))
+          return <RTTPlots data={filteredData} rtt={rtt[index]}/>
+        }
+      )}
+    </>
+  )
 }
-
 export default App;
