@@ -2,7 +2,6 @@ import React , {useState, useEffect} from 'react';
 import * as d3 from 'd3';
 
 import LinePlot from './LinePlot';
-//import data from './testresults/5_ms.json';
 
 type Props = {
   data: any,
@@ -37,7 +36,7 @@ const RTTPlots: React.FC<Props> = ({data, rtt}) =>{
   const xLabel = "Packet Loss [%]";
   const yLabel = "Handshake Completion Time [ms]";
   
-
+  //Display two graphs, one for median, one for 95 percentile.
   return(
     <div style={{display: "flex", flexDirection: "row", justifyContent:"space-evenly"}}>
       <LinePlot data={data} title={`RTT ${rtt}ms, Median`} xLabel={xLabel} yLabel={yLabel} xDomain={xDomain} yDomain={yDomain1} xAccessor={packetLossAccessor} yAccessor={medianAccessor}></LinePlot>
