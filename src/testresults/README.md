@@ -1,6 +1,6 @@
 # Visualize your own testresults
 ## Run the tests
-Run [oqs-speed](https://github.com/open-quantum-safe/speed/tree/main/perf/scripts) handshakes.py
+Run [oqs-speed](https://github.com/open-quantum-safe/speed/tree/main/perf/scripts) handshakes.py\
 Run [pq-tls-benchmark emulation-exp](https://github.com/xvzcf/pq-tls-benchmark/tree/master/emulation-exp/code/kex) experiment.py
 ## Moving files
 Put all the results (`.csv` files and `handshakes.json` file) into this directory.
