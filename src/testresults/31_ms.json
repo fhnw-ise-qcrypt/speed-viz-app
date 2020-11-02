@@ -1,6 +1,7 @@
 [
     {
         "name": "firesaber",
+        "index": 0,
         "data": [
             {
                 "packetLoss": 0,
@@ -131,6 +132,7 @@
     },
     {
         "name": "kyber1024",
+        "index": 1,
         "data": [
             {
                 "packetLoss": 0,
@@ -261,6 +263,7 @@
     },
     {
         "name": "kyber512",
+        "index": 2,
         "data": [
             {
                 "packetLoss": 0,
@@ -391,6 +394,7 @@
     },
     {
         "name": "kyber768",
+        "index": 3,
         "data": [
             {
                 "packetLoss": 0,
@@ -520,7 +524,270 @@
         ]
     },
     {
+        "name": "kyber90s512",
+        "index": 4,
+        "data": [
+            {
+                "packetLoss": 0,
+                "median": 65.08430907580006,
+                "percent95": 65.6818
+            },
+            {
+                "packetLoss": 0.1,
+                "median": 67.40602992440002,
+                "percent95": 65.457996
+            },
+            {
+                "packetLoss": 0.5,
+                "median": 78.9663738968002,
+                "percent95": 65.493227
+            },
+            {
+                "packetLoss": 1,
+                "median": 89.34932870239982,
+                "percent95": 65.596722
+            },
+            {
+                "packetLoss": 1.5,
+                "median": 107.77424060919941,
+                "percent95": 300.245734
+            },
+            {
+                "packetLoss": 2,
+                "median": 115.27948521039973,
+                "percent95": 303.93147
+            },
+            {
+                "packetLoss": 2.5,
+                "median": 133.9694166246,
+                "percent95": 1066.862738
+            },
+            {
+                "packetLoss": 3,
+                "median": 145.88556220500007,
+                "percent95": 1070.06296
+            },
+            {
+                "packetLoss": 4,
+                "median": 175.47971707819963,
+                "percent95": 1075.155735
+            },
+            {
+                "packetLoss": 5,
+                "median": 201.6720240842001,
+                "percent95": 1077.448057
+            },
+            {
+                "packetLoss": 6,
+                "median": 251.31729532639957,
+                "percent95": 1084.36821
+            },
+            {
+                "packetLoss": 7,
+                "median": 281.23810229200024,
+                "percent95": 1085.922414
+            },
+            {
+                "packetLoss": 8,
+                "median": 329.9100769291995,
+                "percent95": 1088.528749
+            },
+            {
+                "packetLoss": 9,
+                "median": 351.5018676358018,
+                "percent95": 1091.599292
+            },
+            {
+                "packetLoss": 10,
+                "median": 420.61801172060035,
+                "percent95": 1360.241563
+            },
+            {
+                "packetLoss": 11,
+                "median": 457.02366704119845,
+                "percent95": 1615.772496
+            },
+            {
+                "packetLoss": 12,
+                "median": 527.6659666802007,
+                "percent95": 2089.058215
+            },
+            {
+                "packetLoss": 13,
+                "median": 538.486315620201,
+                "percent95": 2096.329321
+            },
+            {
+                "packetLoss": 14,
+                "median": 627.7965318101999,
+                "percent95": 3086.665498
+            },
+            {
+                "packetLoss": 15,
+                "median": 677.2483415807997,
+                "percent95": 3091.341575
+            },
+            {
+                "packetLoss": 16,
+                "median": 709.8752358963985,
+                "percent95": 3103.324729
+            },
+            {
+                "packetLoss": 17,
+                "median": 801.9934262343971,
+                "percent95": 3322.033389
+            },
+            {
+                "packetLoss": 18,
+                "median": 899.6441516799991,
+                "percent95": 3412.362149
+            },
+            {
+                "packetLoss": 19,
+                "median": 949.2149858088013,
+                "percent95": 3524.743387
+            },
+            {
+                "packetLoss": 20,
+                "median": 1103.5308410467994,
+                "percent95": 3648.220689
+            }
+        ]
+    },
+    {
+        "name": "lightsaber",
+        "index": 5,
+        "data": [
+            {
+                "packetLoss": 0,
+                "median": 64.85990275440008,
+                "percent95": 65.421994
+            },
+            {
+                "packetLoss": 0.1,
+                "median": 67.71787399739995,
+                "percent95": 65.227724
+            },
+            {
+                "packetLoss": 0.5,
+                "median": 77.14645983599982,
+                "percent95": 65.243059
+            },
+            {
+                "packetLoss": 1,
+                "median": 88.80677157839996,
+                "percent95": 65.401727
+            },
+            {
+                "packetLoss": 1.5,
+                "median": 110.00002260879987,
+                "percent95": 299.681672
+            },
+            {
+                "packetLoss": 2,
+                "median": 120.37045319660031,
+                "percent95": 342.218994
+            },
+            {
+                "packetLoss": 2.5,
+                "median": 131.50365527179952,
+                "percent95": 1066.289689
+            },
+            {
+                "packetLoss": 3,
+                "median": 143.03658088499998,
+                "percent95": 1068.42411
+            },
+            {
+                "packetLoss": 4,
+                "median": 174.09552372979937,
+                "percent95": 1072.053552
+            },
+            {
+                "packetLoss": 5,
+                "median": 200.85476294960046,
+                "percent95": 1077.261739
+            },
+            {
+                "packetLoss": 6,
+                "median": 243.91863580580028,
+                "percent95": 1083.861998
+            },
+            {
+                "packetLoss": 7,
+                "median": 290.49042444220055,
+                "percent95": 1086.824081
+            },
+            {
+                "packetLoss": 8,
+                "median": 319.86040475500084,
+                "percent95": 1088.020261
+            },
+            {
+                "packetLoss": 9,
+                "median": 352.03705065080004,
+                "percent95": 1304.28551
+            },
+            {
+                "packetLoss": 10,
+                "median": 410.56587824679997,
+                "percent95": 1365.034623
+            },
+            {
+                "packetLoss": 11,
+                "median": 431.02163103940086,
+                "percent95": 1374.780189
+            },
+            {
+                "packetLoss": 12,
+                "median": 490.0288504940005,
+                "percent95": 1611.689184
+            },
+            {
+                "packetLoss": 13,
+                "median": 526.8545387300003,
+                "percent95": 2085.127594
+            },
+            {
+                "packetLoss": 14,
+                "median": 601.9286340212013,
+                "percent95": 2468.750565
+            },
+            {
+                "packetLoss": 15,
+                "median": 683.0487594609975,
+                "percent95": 3093.40311
+            },
+            {
+                "packetLoss": 16,
+                "median": 701.7839732685999,
+                "percent95": 3102.758451
+            },
+            {
+                "packetLoss": 17,
+                "median": 801.4289197314016,
+                "percent95": 3360.063498
+            },
+            {
+                "packetLoss": 18,
+                "median": 887.6801945132,
+                "percent95": 3508.095874
+            },
+            {
+                "packetLoss": 19,
+                "median": 962.6643766712016,
+                "percent95": 3508.251535
+            },
+            {
+                "packetLoss": 20,
+                "median": 1067.0499417617955,
+                "percent95": 3787.712936
+            }
+        ]
+    },
+    {
         "name": "ntru_hps2048509",
+        "index": 6,
         "data": [
             {
                 "packetLoss": 0,
@@ -651,6 +918,7 @@
     },
     {
         "name": "ntru_hps2048677",
+        "index": 7,
         "data": [
             {
                 "packetLoss": 0,
@@ -781,6 +1049,7 @@
     },
     {
         "name": "ntru_hps4096821",
+        "index": 8,
         "data": [
             {
                 "packetLoss": 0,
@@ -911,6 +1180,7 @@
     },
     {
         "name": "ntru_hrss701",
+        "index": 9,
         "data": [
             {
                 "packetLoss": 0,
@@ -1040,7 +1310,270 @@
         ]
     },
     {
+        "name": "p256_kyber90s512",
+        "index": 10,
+        "data": [
+            {
+                "packetLoss": 0,
+                "median": 66.06957469380008,
+                "percent95": 66.637877
+            },
+            {
+                "packetLoss": 0.1,
+                "median": 68.42070515159999,
+                "percent95": 66.54571
+            },
+            {
+                "packetLoss": 0.5,
+                "median": 77.82611315960001,
+                "percent95": 66.656807
+            },
+            {
+                "packetLoss": 1,
+                "median": 89.69234986599979,
+                "percent95": 66.803862
+            },
+            {
+                "packetLoss": 1.5,
+                "median": 100.58679751820006,
+                "percent95": 170.889437
+            },
+            {
+                "packetLoss": 2,
+                "median": 113.36018166700015,
+                "percent95": 300.55599
+            },
+            {
+                "packetLoss": 2.5,
+                "median": 135.49091561479977,
+                "percent95": 1068.46586
+            },
+            {
+                "packetLoss": 3,
+                "median": 146.55388690339987,
+                "percent95": 1073.303848
+            },
+            {
+                "packetLoss": 4,
+                "median": 173.0467403976,
+                "percent95": 1081.20726
+            },
+            {
+                "packetLoss": 5,
+                "median": 206.77312190000006,
+                "percent95": 1089.024346
+            },
+            {
+                "packetLoss": 6,
+                "median": 239.52154747720022,
+                "percent95": 1096.169382
+            },
+            {
+                "packetLoss": 7,
+                "median": 263.95350502060074,
+                "percent95": 1099.021084
+            },
+            {
+                "packetLoss": 8,
+                "median": 299.1015131272001,
+                "percent95": 1108.172867
+            },
+            {
+                "packetLoss": 9,
+                "median": 350.2685465128,
+                "percent95": 1311.85761
+            },
+            {
+                "packetLoss": 10,
+                "median": 396.5656161581993,
+                "percent95": 1372.425978
+            },
+            {
+                "packetLoss": 11,
+                "median": 464.45193288339806,
+                "percent95": 1926.310327
+            },
+            {
+                "packetLoss": 12,
+                "median": 512.3242019193998,
+                "percent95": 2086.674821
+            },
+            {
+                "packetLoss": 13,
+                "median": 518.1077081428017,
+                "percent95": 2096.956583
+            },
+            {
+                "packetLoss": 14,
+                "median": 652.9045350194012,
+                "percent95": 3087.620175
+            },
+            {
+                "packetLoss": 15,
+                "median": 695.6645777804008,
+                "percent95": 3098.987171
+            },
+            {
+                "packetLoss": 16,
+                "median": 834.7229225863991,
+                "percent95": 3354.826847
+            },
+            {
+                "packetLoss": 17,
+                "median": 921.9448006002018,
+                "percent95": 3485.311194
+            },
+            {
+                "packetLoss": 18,
+                "median": 991.5952749340007,
+                "percent95": 3521.300687
+            },
+            {
+                "packetLoss": 19,
+                "median": 998.8977818804003,
+                "percent95": 3603.622389
+            },
+            {
+                "packetLoss": 20,
+                "median": 1167.4802217204026,
+                "percent95": 3844.887813
+            }
+        ]
+    },
+    {
+        "name": "prime256v1",
+        "index": 11,
+        "data": [
+            {
+                "packetLoss": 0,
+                "median": 65.39125821979997,
+                "percent95": 66.215764
+            },
+            {
+                "packetLoss": 0.1,
+                "median": 67.64087637800027,
+                "percent95": 65.801892
+            },
+            {
+                "packetLoss": 0.5,
+                "median": 76.59483668340002,
+                "percent95": 65.849902
+            },
+            {
+                "packetLoss": 1,
+                "median": 93.9543899188003,
+                "percent95": 66.100048
+            },
+            {
+                "packetLoss": 1.5,
+                "median": 105.163208034,
+                "percent95": 297.316416
+            },
+            {
+                "packetLoss": 2,
+                "median": 113.82810913400007,
+                "percent95": 302.580061
+            },
+            {
+                "packetLoss": 2.5,
+                "median": 137.53303574399962,
+                "percent95": 1066.749497
+            },
+            {
+                "packetLoss": 3,
+                "median": 147.10406586100052,
+                "percent95": 1070.954769
+            },
+            {
+                "packetLoss": 4,
+                "median": 172.24610851280025,
+                "percent95": 1073.255623
+            },
+            {
+                "packetLoss": 5,
+                "median": 213.4604884834002,
+                "percent95": 1079.223105
+            },
+            {
+                "packetLoss": 6,
+                "median": 239.67080127700032,
+                "percent95": 1082.24082
+            },
+            {
+                "packetLoss": 7,
+                "median": 279.47466544479954,
+                "percent95": 1086.298778
+            },
+            {
+                "packetLoss": 8,
+                "median": 310.7258214430003,
+                "percent95": 1088.323101
+            },
+            {
+                "packetLoss": 9,
+                "median": 358.20946033300015,
+                "percent95": 1303.730621
+            },
+            {
+                "packetLoss": 10,
+                "median": 401.97934379479875,
+                "percent95": 1360.761493
+            },
+            {
+                "packetLoss": 11,
+                "median": 456.97256644199854,
+                "percent95": 1843.038345
+            },
+            {
+                "packetLoss": 12,
+                "median": 467.74628829120184,
+                "percent95": 1615.022113
+            },
+            {
+                "packetLoss": 13,
+                "median": 557.2422991040025,
+                "percent95": 2099.549224
+            },
+            {
+                "packetLoss": 14,
+                "median": 614.9425700720006,
+                "percent95": 2794.748555
+            },
+            {
+                "packetLoss": 15,
+                "median": 679.2674565501991,
+                "percent95": 3092.759127
+            },
+            {
+                "packetLoss": 16,
+                "median": 770.6853841958003,
+                "percent95": 3334.961492
+            },
+            {
+                "packetLoss": 17,
+                "median": 796.5221836961988,
+                "percent95": 3389.816423
+            },
+            {
+                "packetLoss": 18,
+                "median": 913.8093335968002,
+                "percent95": 3426.227641
+            },
+            {
+                "packetLoss": 19,
+                "median": 1008.6689731509974,
+                "percent95": 3534.575464
+            },
+            {
+                "packetLoss": 20,
+                "median": 1110.0529167646025,
+                "percent95": 4096.032369
+            }
+        ]
+    },
+    {
         "name": "saber",
+        "index": 12,
         "data": [
             {
                 "packetLoss": 0,
